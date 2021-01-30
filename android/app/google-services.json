@@ -1,0 +1,39 @@
+{
+    "project_info": {
+      "project_number": "569266414178",
+      "project_id": "rn-fire-notification",
+      "storage_bucket": "rn-fire-notification.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:569266414178:android:31b6f7de00dd2847b0e73b",
+          "android_client_info": {
+            "package_name": "com.studytime"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "569266414178-e0f27jg7n2mgo8mnnj8qj11ovcpp5pdm.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDg9VjZYV6N9a0LApr5SgOWNknTKxjU9TE"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "569266414178-e0f27jg7n2mgo8mnnj8qj11ovcpp5pdm.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
