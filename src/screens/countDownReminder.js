@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
   },
   time_Input: {
     alignSelf: 'center',
-    borderBottomColor: Colors.black,
+    borderBottomColor: Colors.pureLightBlue,
     borderBottomWidth: 1,
     marginBottom: 20,
   },

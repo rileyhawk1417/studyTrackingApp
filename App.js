@@ -10,10 +10,11 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import DrawerContents from './services/DrawerItems';
 import AnimatedSplash from 'react-native-animated-splash-screen';
 
-import {CounterTabs, AboutScreen} from './src/screens';
+import {AboutScreen, CounterTabs, InfoScreen} from './src/screens';
 import Colors from './services/colors';
 import {ScreenSize} from './services/config';
 
@@ -26,6 +27,7 @@ const DrawerContainer = () => {
         initialRouteName="Study & Track"
         drawerContentOptions={{
           activeTintColor: Colors.pureLightBlue,
+          inactiveTintColor: Colors.black,
           itemStyle: {borderRadius: 15},
         }}
         drawerContent={(props) => <DrawerContents {...props} />}>
@@ -34,16 +36,33 @@ const DrawerContainer = () => {
           component={CounterTabs}
           options={{
             drawerIcon: () => (
-              <Fontisto name="stopwatch" size={24} color={Colors.black} />
+              <Fontisto
+                name="stopwatch"
+                size={24}
+                color={Colors.pureLightBlue}
+              />
             ),
           }}
         />
         <Drawer.Screen
-          name="About"
+          name="About The Developer"
           component={AboutScreen}
           options={{
             drawerIcon: () => (
-              <Feather name="info" size={24} color={Colors.black} />
+              <MaterialIcons
+                name="face"
+                size={24}
+                color={Colors.pureLightBlue}
+              />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="Info"
+          component={InfoScreen}
+          options={{
+            drawerIcon: () => (
+              <Feather name="info" size={24} color={Colors.pureLightBlue} />
             ),
           }}
         />

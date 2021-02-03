@@ -203,13 +203,13 @@ const styles = StyleSheet.create({
     shadowOffset: {height: 10},
   },
   menu: {
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.pureLightBlue,
   },
   secondary: {
     width: 48,
     height: 48,
+    backgroundColor: Colors.pureLightBlue,
     borderRadius: 48 / 2,
-    backgroundColor: '#000',
   },
   deleteDialog: {
     flex: 1,

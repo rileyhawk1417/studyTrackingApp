@@ -72,5 +72,5 @@ The app's purpose is to help the user set goals or objectives during the time th
 >Visuals and FrontEnd
 - [x] Add a Splash Screen.
 - [ ] Add some cool animations.
-- [ ] Make it colorful.
+- [x] Make it colorful.
 - [ ] Look up some designs.

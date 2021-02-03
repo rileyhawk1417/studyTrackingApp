@@ -6,8 +6,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Colors from '../services/colors';
-import About_Screen from './screens/AboutScreen';
+import Info_Screen from './screens/InfoScreen';
 import TasksToDo from './screens/realmTaskList';
+import About_Screen from './screens/AboutScreen';
 const Stack = createStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
@@ -53,11 +54,32 @@ export const TasksScreen = ({navigation}) => {
   );
 };
 
+export const InfoScreen = ({navigation}) => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Information"
+        component={Info_Screen}
+        options={{
+          headerRight: () => (
+            <FontAwesome
+              name="bars"
+              size={30}
+              onPress={() => navigation.toggleDrawer()}
+              style={styles.drawerIcon}
+            />
+          ),
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 export const AboutScreen = ({navigation}) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="About Screen"
+        name="About"
         component={About_Screen}
         options={{
           headerRight: () => (

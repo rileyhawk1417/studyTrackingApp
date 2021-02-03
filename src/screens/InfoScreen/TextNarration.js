@@ -1,47 +1,43 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Entypo from 'react-native-vector-icons/Entypo';
-import Feather from 'react-native-vector-icons/Feather';
+import {Text, View, StyleSheet, ScrollView} from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Colors from '../../../services/colors';
 import {ScreenSize} from '../../../services/config';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const TextDisplay = () => {
   return (
-    <ScrollView>
-      <View>
-        <View style={styles.rowView}>
-          <Feather name="info" size={60} color={Colors.turkishSea} />
-          <Text>This is the about screen</Text>
-        </View>
-      </View>
+    <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.txtContainer}>
         <Text style={[styles.txtAlign, styles.txtWidth]}>
-          The App was mainly designed to help in monitoring Study Time, but can
-          be used for other things.
+          The App was mainly designed to help monitor the number of things
+          completed while studying, but the app can be used for other things.
         </Text>
         <Text style={[styles.txtAlign, styles.txtWidth]}>
-          This App reminds you to refresh when the timer ends or take a break
-          and then get back to the tasks at hand.
+          When the timer ends it will let you know that you have to take a
+          break.
         </Text>
         <View style={styles.rowView}>
-          <Entypo name="bell" color={Colors.golden} size={60} />
+          <MaterialCommunityIcons
+            name="alarm-note"
+            color={Colors.golden}
+            size={45}
+          />
           <Text style={[styles.txtAlign, styles.txtWidth]}>
             It uses the default notification sound for your phone and alerts you
             when the timer ends.
           </Text>
         </View>
         <View style={styles.rowView}>
-          <FontAwesome name="check-square" color={Colors.blueSky} size={60} />
+          <Ionicons
+            name="checkmark-circle-outline"
+            color={Colors.blueSky}
+            size={45}
+          />
           <Text style={[styles.txtAlign, styles.txtWidth]}>
             There is a checklist section of the app that allows you to tick off
-            tasks completed within that time limit.
+            tasks completed within that time limit. Even if you dont use the
+            timer the checklist can still be used as a todo list.
           </Text>
         </View>
       </View>
@@ -50,6 +46,11 @@ export const TextDisplay = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   txtContainer: {
     width: ScreenSize.WIDTH,
     justifyContent: 'center',
@@ -64,13 +65,14 @@ const styles = StyleSheet.create({
   rowView: {
     paddingTop: 20,
     paddingBottom: 20,
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderTopColor: Colors.black,
+    borderTopColor: Colors.pureLightBlue,
     borderTopWidth: 1,
   },
   txtWidth: {
-    width: 290,
+    width: 210,
+    fontSize: 18,
   },
 });
